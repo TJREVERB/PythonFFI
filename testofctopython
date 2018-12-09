@@ -3,8 +3,3 @@ ffibuilder = FFI()
 
 ffibuilder.cdef("static void Main();")
 
-ffibuilder.set_source("_code",  # name of the output C extension
-"""
-    #include "code.h"',
-""",
-    sources=['code.c'])   # includes pi.c as additional sources
