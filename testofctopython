@@ -1,0 +1,10 @@
+from cffi import FFI
+ffibuilder = FFI()
+
+ffibuilder.cdef("")
+
+ffibuilder.set_source("_pi",  # name of the output C extension
+"""
+    #include "pi.h"',
+""",
+    sources=['pi.c'],   # includes pi.c as additional sources
