@@ -1,5 +1,10 @@
-from cffi import FFI
-ffibuilder = FFI()
+def print:
+    from cffi import FFI
+    ffi = FFI()
 
-ffibuilder.cdef("static void Main();")
+    ffi.cdef("""
+        static void Main();
+    """)
+    C = ffi.dlopen(None)
+    C.Main()
 
