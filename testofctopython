@@ -1,4 +1,4 @@
-def print:
+def print():
     from cffi import FFI
     ffi = FFI()
 
