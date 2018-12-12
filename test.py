@@ -5,5 +5,6 @@ def print():
     ffi.cdef("""
         static void Main();
     """)
-    C = ffi.dlopen(core.c)
-    C.Main()
+    print(ffi.new())
+    #C = 
+    #C.Main()
