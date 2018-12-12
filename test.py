@@ -1,10 +1,8 @@
 def print():
     from cffi import FFI
     ffi = FFI()
-
     ffi.cdef("""
-        static void Main();
+        static void Main(void);
     """)
-    print(ffi.Main())
     #C = 
     #C.Main()
