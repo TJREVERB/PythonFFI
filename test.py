@@ -5,6 +5,6 @@ def print():
     ffi.cdef("""
         static void Main();
     """)
-    print(ffi.new())
+    print(ffi.new(cdecl))
     #C = 
     #C.Main()
