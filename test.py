@@ -2,7 +2,9 @@ def print():
     from cffi import FFI
     ffi = FFI()
     ffi.cdef("""
-        static void Main(void);
+        static void Main();
     """)
-    #C = 
+    C = ffi.verify("""
+        static void Main() {
+            
     #C.Main()
