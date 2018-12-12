@@ -6,5 +6,8 @@ def print():
     """)
     C = ffi.verify("""
         static void Main() {
-            
+            Console.WriteLine("Hello World!");
+        }
+    """)
+    print(C.Main())
     #C.Main()
