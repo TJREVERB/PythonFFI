@@ -15,7 +15,7 @@
  */
 
 #include <ants-api.h>
-#include <kubos-hal/i2c.h>
+#include <i2c.h>
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
