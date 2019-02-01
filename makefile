@@ -1,11 +1,11 @@
 CC = gcc
 
-default: libexamples.a
+default: libants.a
 
-libexamples.a: examples.o
+libexamples.a: ants.o
 	ar rcs $@ $^
     
-examples.o: examples.c examples.h
+ants.o: ants.c ants-api.h
 	$(CC) -c $<
 
 clean:
