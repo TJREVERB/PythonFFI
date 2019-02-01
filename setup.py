@@ -4,12 +4,12 @@ from Cython.Build import cythonize
 
 examples_extension = Extension(
     name="isis-ants",
-    sources=["pyexamples.pyx"],
+    sources=["isis-ants.pyx"],
     libraries=["ants"],
     library_dirs=["lib"],
     include_dirs=["lib"]
 )
 setup(
-    name="pyexamples",
+    name="isis-ants",
     ext_modules=cythonize([examples_extension])
 )
