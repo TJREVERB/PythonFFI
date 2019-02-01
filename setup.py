@@ -3,7 +3,7 @@ from distutils.extension import Extension
 from Cython.Build import cythonize
 
 examples_extension = Extension(
-    name="pyexamples",
+    name="isis-ants",
     sources=["pyexamples.pyx"],
     libraries=["ants"],
     library_dirs=["lib"],
