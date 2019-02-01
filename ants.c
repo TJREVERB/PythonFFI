@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include <ants-api.h>
-#include <i2c.h>
+#include "ants-api.h"
+#include "i2c.h"
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
