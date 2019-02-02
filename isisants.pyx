@@ -1,4 +1,10 @@
 cdef extern from "ants-api.h":
+    typedef enum {
+    ANTS_OK,                    
+    ANTS_ERROR,                 
+    ANTS_ERROR_CONFIG,           
+    ANTS_ERROR_NOT_IMPLEMENTED 
+    } KANTSStatus;
     KANTSStatus k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout)
     void k_ants_terminate(void)
     KANTSStatus k_ants_configure(KANTSController config)
