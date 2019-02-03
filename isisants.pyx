@@ -19,7 +19,7 @@ cdef extern from "ants-api.h":
         ANTS_ERROR, 
         ANTS_ERROR_CONFIG, 
         ANTS_ERROR_NOT_IMPLEMENTED
-    typedef enum KANTSController:
+    ctypedef enum KANTSController:
         PRIMARY,
         SECONDARY
     KANTSStatus k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout)
