@@ -67,6 +67,6 @@ def py_k_ants_watchdog_kick():
 def py_k_ants_watchdog_start():
     k_ants_watchdog_start(void)
 def py_k_ants_watchdog_stop():
-    k_ants_watchdog_stop(void)
+    k_ants_watchdog_stop()
 def py_k_ants_passthrough(tx: bytes,tx_len: bytes,rx: bytes,rx_len: bytes) -> None:
     k_ants_passthrough(tx,tx_len,rx,rx_len)
