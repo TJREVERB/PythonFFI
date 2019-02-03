@@ -6,7 +6,7 @@ cdef extern from "ants-api.h":
         ANT_2, 
         ANT_3, 
         ANT_4
-    ctypedef struct __attribute__((packed)) ants_telemetry:
+    ctypedef struct ants_telemetry:
         uint16_t raw_temp; 
         uint16_t deploy_status; 
         uint32_t uptime
