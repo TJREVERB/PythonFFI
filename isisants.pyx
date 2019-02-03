@@ -1,9 +1,9 @@
 import stdint
 import stdbool
+typedef enum{ANT_1, ANT_2, ANT_3, ANT_4} KANTSAnt;
+typedef struct{uint16_t raw_temp; uint16_t deploy_status; uint32_t uptime;} __attribute__((packed)) ants_telemetry;
+typedef enum{ANTS_OK, ANTS_ERROR, ANTS_ERROR_CONFIG, ANTS_ERROR_NOT_IMPLEMENTED} KANTSStatus;
 cdef extern from "ants-api.h":
-    typedef enum{ANT_1, ANT_2, ANT_3, ANT_4} KANTSAnt;
-    typedef struct{uint16_t raw_temp; uint16_t deploy_status; uint32_t uptime;} __attribute__((packed)) ants_telemetry;
-    typedef enum{ANTS_OK, ANTS_ERROR, ANTS_ERROR_CONFIG, ANTS_ERROR_NOT_IMPLEMENTED} KANTSStatus;
     KANTSStatus k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout)
     void k_ants_terminate()
     KANTSStatus k_ants_configure(KANTSController config)
