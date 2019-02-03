@@ -1,6 +1,6 @@
 cdef extern from "ants-api.h":
-    import stdbool.h
-    import stdint.h
+    import stdbool.h from ants-api.h
+    import stdint.h from ants-api.h
     ctypedef enum KANTSAnt:
         ANT_1, 
         ANT_2, 
