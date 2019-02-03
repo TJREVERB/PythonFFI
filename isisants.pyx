@@ -1,5 +1,9 @@
-import stdint
-import stdbool
+cdef extern from "stdint.h":
+    uint8_t
+    uint16_t
+    uint32_t
+cdef extern from "stdbool.h":
+    bool
 cdef extern from "ants-api.h":
     ctypedef enum KANTSAnt:
         ANT_1, 
@@ -15,6 +19,9 @@ cdef extern from "ants-api.h":
         ANTS_ERROR, 
         ANTS_ERROR_CONFIG, 
         ANTS_ERROR_NOT_IMPLEMENTED
+    typedef enum KANTSController:
+        PRIMARY,
+        SECONDARY
     KANTSStatus k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout)
     void k_ants_terminate()
     KANTSStatus k_ants_configure(KANTSController config)
