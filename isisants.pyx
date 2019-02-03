@@ -1,7 +1,8 @@
 import stdint
 import stdbool
 cdef extern from "ants-api.h":
-    typedef enum {
+    typedef enum
+    {
         ANT_1,
         ANT_2,
         ANT_3,
@@ -13,7 +14,8 @@ cdef extern from "ants-api.h":
         uint16_t deploy_status;
         uint32_t uptime;
     } __attribute__((packed)) ants_telemetry;
-    typedef enum {
+    typedef enum
+    {
         ANTS_OK,
         ANTS_ERROR,
         ANTS_ERROR_CONFIG,
