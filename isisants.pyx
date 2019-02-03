@@ -1,10 +1,6 @@
-cdef extern from "stdint.h":
-    uint8_t
-    uint16_t
-    uint32_t
-cdef extern from "stdbool.h":
-    bool
 cdef extern from "ants-api.h":
+    stdbool.h
+    stdint.h
     ctypedef enum KANTSAnt:
         ANT_1, 
         ANT_2, 
