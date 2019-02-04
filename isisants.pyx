@@ -39,7 +39,7 @@ cdef extern from "ants-api.h":
     KANTSStatus k_ants_watchdog_stop()
     KANTSStatus k_ants_passthrough(const uint8_t * tx, int tx_len, uint8_t * rx,int rx_len)
 
-def py_k_ants_init(bus: bytes,primary: bytes,secondary: bytes,ant_count: bytes,timeout: bytes) -> None:
+def py_k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout):
     k_ants_init(bus,primary,secondary,ant_count,timeout)
 def py_k_ants_terminate():
     k_ants_terminate()
@@ -57,8 +57,8 @@ def py_k_ants_auto_deploy(timeout: bytes) -> None:
     k_ants_auto_deploy(timeout)
 def py_k_ants_cancel_deploy():
     k_ants_cancel_deploy()
-def py_k_ants_get_deploy_status(resp: bytes) -> None:
-    k_ants_get_deploy_status(uint16_t * resp)
+def py_k_ants_get_deploy_status(uint16_t * resp: bytes) -> None:
+    k_ants_get_deploy_status(resp)
 def py_k_ants_get_uptime(uptime: bytes) -> None:
     k_ants_get_uptime(uint32_t * uptime)
 def py_k_ants_get_system_telemetry(telem: bytes) -> None:
