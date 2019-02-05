@@ -1,12 +1,10 @@
-LIB_DIR = lib
-
 default: isisants
 
-isis-ants: setup.py isisants.pyx $(LIB_DIR)/libexamples.a
+isis-ants: setup.py isisants.pyx libexamples.a
 	python3 setup.py build_ext --inplace && rm -f isisants.c && rm -Rf build
 
-$(LIB_DIR)/libexamples.a:
-	make -C $(LIB_DIR) libexamples.a
+libexamples.a:
+	make -C libexamples.a
 
 clean:
 	rm *.so
