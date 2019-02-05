@@ -58,7 +58,7 @@ def py_k_ants_auto_deploy(uint8_t timeout):
     k_ants_auto_deploy(timeout)
 def py_k_ants_cancel_deploy():
     k_ants_cancel_deploy()
-def py_k_ants_get_deploy_status(int resp):
+def py_k_ants_get_deploy_status(long long resp):
     k_ants_get_deploy_status(<uint16_t *>resp)
 def py_k_ants_get_uptime( long long uptime):
     k_ants_get_uptime(<uint32_t *>uptime)
@@ -66,7 +66,7 @@ def py_k_ants_get_system_telemetry(telem):
     k_ants_get_system_telemetry(<ants_telemetry *>telem)
 def py_k_ants_get_activation_count(KANTSAnt antenna, uint8_t * count):
     k_ants_get_activation_count(antenna,count)
-def py_k_ants_get_activation_time(KANTSAnt antenna, int time):
+def py_k_ants_get_activation_time(KANTSAnt antenna, long long time):
     k_ants_get_activation_time(antenna,<uint16_t *>time)
 def py_k_ants_watchdog_kick():
     k_ants_watchdog_kick()
