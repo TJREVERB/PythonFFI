@@ -1,6 +1,5 @@
 from libc.stdint cimport uint8_t, uint16_t, uint32_t
 from libcpp cimport bool
-from 
 cdef extern from "ants-api.h":
     ctypedef enum KANTSAnt:
         ANT_1, 
