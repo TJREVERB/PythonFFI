@@ -1,6 +1,6 @@
 default: isisants
 
-isis-ants: setup.py isisants.pyx libexamples.a
+isisants: setup.py isisants.pyx libexamples.a
 	python3 setup.py build_ext --inplace && rm -f isisants.c && rm -Rf build
 
 libexamples.a:
