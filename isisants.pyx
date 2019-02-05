@@ -62,8 +62,8 @@ def py_k_ants_get_deploy_status(short resp):
     k_ants_get_deploy_status(<uint16_t *>resp)
 def py_k_ants_get_uptime( int uptime):
     k_ants_get_uptime(<uint32_t *>uptime)
-def py_k_ants_get_system_telemetry(ants_telemetry * telem):
-    k_ants_get_system_telemetry(telem)
+def py_k_ants_get_system_telemetry(telem):
+    k_ants_get_system_telemetry(ants_telemetry * telem)
 def py_k_ants_get_activation_count(KANTSAnt antenna, uint8_t * count):
     k_ants_get_activation_count(antenna,count)
 def py_k_ants_get_activation_time(KANTSAnt antenna, short time):
