@@ -6,8 +6,6 @@ examples_extension = Extension(
     name="isisants",
     sources=["isisants.pyx"],
     libraries=["examples"],
-    library_dirs=["lib"],
-    include_dirs=["lib"]
 )
 setup(
     name="isisants",
