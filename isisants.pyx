@@ -36,8 +36,6 @@ cdef extern from "ants-api.h":
     KANTSStatus k_ants_watchdog_start()
     KANTSStatus k_ants_watchdog_stop()
     KANTSStatus k_ants_passthrough(const uint8_t * tx, int tx_len, uint8_t * rx,int rx_len)
-cdef extern from "Convert.c":
-    unsigned short convert16(uint16_t p)
     
     
 def py_k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout):
