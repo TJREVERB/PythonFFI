@@ -25,7 +25,7 @@ cdef extern from "ants-api.h":
     #KANTSStatus k_ants_arm()
     KANTSStatus k_ants_disarm()
     KANTSStatus k_ants_deploy(KANTSAnt antenna, bool override, uint8_t timeout)
-    KANTSStatus k_ants_auto_deploy(uint8_t timeout)
+    #KANTSStatus k_ants_auto_deploy(uint8_t timeout)
     KANTSStatus k_ants_cancel_deploy()
     KANTSStatus k_ants_get_deploy_status(uint16_t * resp)
     KANTSStatus k_ants_get_uptime(uint32_t * uptime)
@@ -52,8 +52,8 @@ def py_k_ants_disarm():
     k_ants_disarm()
 def py_k_ants_deploy(KANTSAnt antenna, bool override, uint8_t timeout):
     k_ants_deploy(antenna,override,timeout)
-def py_k_ants_auto_deploy(uint8_t timeout):
-    k_ants_auto_deploy(timeout)
+#def py_k_ants_auto_deploy(uint8_t timeout):
+    #k_ants_auto_deploy(timeout)
 def py_k_ants_cancel_deploy():
     k_ants_cancel_deploy()
 def py_k_ants_get_deploy_status(long long resp):
