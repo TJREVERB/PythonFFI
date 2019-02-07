@@ -5,7 +5,7 @@ from distutils.extension import Extension
 examples_extension = Extension(
     name="isisants",
     sources=["isisants.pyx"],
-    libraries=["libexamples"]
+    libraries=["libants"]
 )
 setup(
     name="isisants",
