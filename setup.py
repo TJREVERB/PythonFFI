@@ -9,5 +9,5 @@ examples_extension = Extension(
 )
 setup(
     name="isisants",
-    ext_modules=cythonize([examples_extension])
+    ext_modules=cythonize(examples_extension)
 )
