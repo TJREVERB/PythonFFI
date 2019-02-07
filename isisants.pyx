@@ -22,7 +22,7 @@ cdef extern from "ants-api.h":
     void k_ants_terminate()
     KANTSStatus k_ants_configure(KANTSController config)
     KANTSStatus k_ants_reset()
-    KANTSStatus k_ants_arm()
+    #KANTSStatus k_ants_arm()
     KANTSStatus k_ants_disarm()
     KANTSStatus k_ants_deploy(KANTSAnt antenna, bool override, uint8_t timeout)
     KANTSStatus k_ants_auto_deploy(uint8_t timeout)
@@ -46,8 +46,8 @@ def py_k_ants_configure(KANTSController config):
     k_ants_configure(config)
 def py_k_ants_reset():
     k_ants_reset()
-def py_k_ants_arm():
-    k_ants_arm()
+#def py_k_ants_arm():
+    #k_ants_arm()
 def py_k_ants_disarm():
     k_ants_disarm()
 def py_k_ants_deploy(KANTSAnt antenna, bool override, uint8_t timeout):
