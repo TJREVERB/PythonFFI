@@ -1,7 +1,7 @@
 default: isisants
 
 isisants: setup.py isisants.pyx libants.a
-	python3 setup.py build_ext --inplace && rm -f isisants.c
+	python3 setup.py build_ext --inplace
 
 libants.a:
 	make -C libants.a
