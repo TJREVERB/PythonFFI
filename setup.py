@@ -1,13 +1,15 @@
 from distutils.core import setup
-from Cython.Build import cythonize
 from distutils.extension import Extension
+from Cython.Build import cythonize
 
 examples_extension = Extension(
     name="isisants",
     sources=["isisants.pyx"],
-    libraries=["ants"]
+    libraries=["ants"],
+    library_dirs=["lib"],
+    include_dirs=["lib"]
 )
 setup(
     name="isisants",
-    ext_modules=cythonize(examples_extension)
+    ext_modules=cythonize([examples_extension])
 )
