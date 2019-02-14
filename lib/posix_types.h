@@ -33,6 +33,6 @@ typedef void (*__kernel_sighandler_t)(int);
 typedef int __kernel_key_t;
 typedef int __kernel_mqd_t;
 
-#include "posix_types.h"
+#include "asmposix_types.h"
 
 #endif /* _LINUX_POSIX_TYPES_H */
