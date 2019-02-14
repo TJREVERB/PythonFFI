@@ -90,10 +90,10 @@ def py_k_ants_watchdog_stop():
     k_ants_watchdog_stop()
 def py_k_ants_passthrough(const uint8_t * tx, int tx_len, uint8_t * rx,int rx_len):
     k_ants_passthrough(tx,tx_len,rx,rx_len)
-def py_k_i2c_init(char * device, int * fp):
-    k_i2c_init(device, fp)
-def py_k_i2c_terminate(int * fp):
-    k_i2c_terminate(fp)
+def py_k_i2c_init(char * device, uint8_t * fp):
+    k_i2c_init(device, <int *>fp)
+def py_k_i2c_terminate(uint8_t * fp):
+    k_i2c_terminate(<int *>fp)
 def py_k_i2c_write(int i2c, long long addr, uint8_t *ptr, int len):
     k_i2c_write(i2c, <uint16_t>addr, ptr, len)
 def py_k_i2c_read(int i2c, long long addr, uint8_t *ptr, int len):
