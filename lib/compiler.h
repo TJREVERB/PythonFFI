@@ -247,7 +247,7 @@ static __always_inline void __write_once_size(volatile void *p, void *res, int s
  * with an explicit memory barrier or atomic instruction that provides the
  * required ordering.
  */
-#include <asm/barrier.h>
+#include "barrier.h"
 #include <linux/kasan-checks.h>
 
 #define __READ_ONCE(x, check)						\
