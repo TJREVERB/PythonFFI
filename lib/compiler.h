@@ -248,7 +248,7 @@ static __always_inline void __write_once_size(volatile void *p, void *res, int s
  * required ordering.
  */
 #include "barrier.h"
-#include <linux/kasan-checks.h>
+#include "kasan-checks.h"
 
 #define __READ_ONCE(x, check)						\
 ({									\
