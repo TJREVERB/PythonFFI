@@ -11,7 +11,7 @@
 #elif defined(__s390__)
 #include "5barrier.h"
 #elif defined(__sh__)
-#include "../../arch/sh/include/asm/barrier.h"
+#include "6barrier.h"
 #elif defined(__sparc__)
 #include "../../arch/sparc/include/asm/barrier.h"
 #elif defined(__tile__)
@@ -27,7 +27,7 @@
 #elif defined(__nds32__)
 #include "../../arch/nds32/include/asm/barrier.h"
 #else
-#include <asm-generic/barrier.h>
+#include "2barrier.h"
 #endif
 
 /*
