@@ -18,13 +18,13 @@
 #include "i2c.h"
 #include <errno.h>
 #include <fcntl.h>
-#include <linux/i2c-dev.h>
+#include <i2c-dev.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/ioctl.h>
-#include <sys/types.h>
+#include <ioctl.h>
+#include <types.h>
 #include <unistd.h>
 
 KI2CStatus k_i2c_init(char * device, int * fp)
