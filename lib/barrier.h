@@ -3,9 +3,9 @@
 #if defined(__i386__) || defined(__x86_64__)
 #include "../../arch/x86/include/asm/barrier.h"
 #elif defined(__arm__)
-#include "../../arch/arm/include/asm/barrier.h"
+#include "1barrier.h"
 #elif defined(__aarch64__)
-#include "../../arch/arm64/include/asm/barrier.h"
+#include "3barrier.h"
 #elif defined(__powerpc__)
 #include "../../arch/powerpc/include/asm/barrier.h"
 #elif defined(__s390__)
