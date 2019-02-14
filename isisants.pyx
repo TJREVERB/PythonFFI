@@ -1,5 +1,21 @@
 from libc.stdint cimport uint8_t, uint16_t, uint32_t
 from libcpp cimport bool
+cdef extern from "i2c.h":
+    ctypedef enum KI2CStatus:
+        I2C_OK = 0,
+        I2C_ERROR,
+        I2C_ERROR_AF,
+        I2C_ERROR_ADDR_TIMEOUT,
+        I2C_ERROR_TIMEOUT,
+        I2C_ERROR_NACK,
+        I2C_ERROR_TXE_TIMEOUT,
+        I2C_ERROR_BTF_TIMEOUT,
+        I2C_ERROR_NULL_HANDLE,
+        I2C_ERROR_CONFIG
+    KI2CStatus k_i2c_init(char * device, int * fp)
+    void k_i2c_terminate(int * fp)
+    KI2CStatus k_i2c_write(int i2c, uint16_t addr, uint8_t *ptr, int len)
+    KI2CStatus k_i2c_read(int i2c, uint16_t addr, uint8_t *ptr, int len)
 cdef extern from "ants-api.h":
     ctypedef enum KANTSAnt:
         ANT_1, 
@@ -74,3 +90,11 @@ def py_k_ants_watchdog_stop():
     k_ants_watchdog_stop()
 def py_k_ants_passthrough(const uint8_t * tx, int tx_len, uint8_t * rx,int rx_len):
     k_ants_passthrough(tx,tx_len,rx,rx_len)
+def py_k_i2c_init(char * device, int * fp):
+    k_i2c_init(device, fp)
+def py_k_i2c_terminate(int * fp):
+    k_i2c_terminate(fp)
+def py_k_i2c_write(int i2c, long long addr, uint8_t *ptr, int len):
+    k_i2c_write(i2c, <uint16_t>addr, ptr, len)
+def py_k_i2c_read(int i2c, long long addr, uint8_t *ptr, int len):
+    k_i2c_read(i2c, <uint16_t>addr, ptr, len)
