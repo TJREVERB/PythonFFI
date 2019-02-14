@@ -21,7 +21,7 @@
 #define _UAPI_LINUX_I2C_DEV_H
 
 #include "types.h"
-#include <compiler.h>
+#include "compiler.h"
 
 /* /dev/i2c-X ioctl commands.  The ioctl's parameter is always an
  * unsigned long, except for:
