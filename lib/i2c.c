@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ioctl.h"
-#include <types.h>
+#include "types.h"
 #include <unistd.h>
 
 KI2CStatus k_i2c_init(char * device, int * fp)
