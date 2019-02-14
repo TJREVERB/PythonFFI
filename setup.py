@@ -5,7 +5,7 @@ from Cython.Build import cythonize
 examples_extension = Extension(
     name="isisants",
     sources=["isisants.pyx"],
-    libraries=["ants"],
+    libraries=["ants", "n"],
     library_dirs=["lib"],
     include_dirs=["lib"]
 )
