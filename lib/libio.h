@@ -25,7 +25,7 @@
 #define _LIBIO_H 1
 
 #ifndef _LIBC
-# error "libio.h should only be included when building glibc itself"
+
 #endif
 #ifdef _ISOMAC
 # error "libio.h should not be included under _ISOMAC"
