@@ -53,7 +53,7 @@ typedef union
   } __combined;
 } _IO_iconv_t;
 
-#include <shlib-compat.h>
+#include "shlib-compat.h"
 
 /* _IO_seekoff modes */
 #define _IOS_INPUT	1
