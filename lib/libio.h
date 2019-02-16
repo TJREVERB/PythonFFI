@@ -24,7 +24,6 @@
 #ifndef _LIBIO_H
 #define _LIBIO_H 1
 
-#ifndef _LIBC
 
 #endif
 #ifdef _ISOMAC
