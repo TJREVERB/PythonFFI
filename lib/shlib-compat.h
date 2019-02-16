@@ -16,7 +16,7 @@
 #ifndef _SHLIB_COMPAT_H
 #define _SHLIB_COMPAT_H	1
 
-# include <abi-versions.h>
+# include "abi-version.h"
 
 #ifdef SHARED
 
