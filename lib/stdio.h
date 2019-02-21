@@ -35,7 +35,7 @@ extern "C" {
 #include "stddef.h"
  
 #define __need___va_list
-#include <stdarg.h>
+#include "stdarg.h"
  
 /*
 * <sys/reent.h> defines __sFILE, _fpos_t.
