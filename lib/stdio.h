@@ -32,7 +32,7 @@ extern "C" {
 #define _FSTDIO                 /* ``function stdio'' */
  
 #define __need_size_t
-#include <stddef.h>
+#include "stddef.h"
  
 #define __need___va_list
 #include <stdarg.h>
