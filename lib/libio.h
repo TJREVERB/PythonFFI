@@ -37,11 +37,11 @@
 #endif
 
 #define __need_wchar_t
-#include <stddef.h>
+#include "stddef.h"
 
 #include "__mbstate_t.h"
 #include "wint_t.h"
-#include <gconv.h>
+#include "gconv.h"
 
 typedef union
 {
