@@ -58,7 +58,7 @@ typedef long _ssize_t;
 #endif
 #endif
 #define __need_wint_t
-#include <stddef.h>
+#include "stddef.h"
 #ifndef __mbstate_t_defined
 /* Conversion state information.  */
 typedef struct
