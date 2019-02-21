@@ -7,7 +7,7 @@
 #ifndef	_SYS__TYPES_H
 #define _SYS__TYPES_H
 #include <machine/_types.h>
-#include <sys/lock.h>
+#include "lock.h"
 #ifndef __off_t_defined
 typedef long _off_t;
 #endif
