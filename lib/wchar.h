@@ -61,7 +61,7 @@
 #define _WCHAR_H_
 
 #include <sys/cdefs.h>
-#include <sys/_null.h>
+#include "_null.h"
 #include <sys/_types.h>
 #include <machine/_limits.h>
 #include <_ctype.h>
