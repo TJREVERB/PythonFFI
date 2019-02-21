@@ -2,9 +2,9 @@
 #define __need_size_t
 #define __need_wchar_t
 #define __need_NULL
-#include <stddef.h>
+#include "stddef.h"
 #define __need___va_list
-#include <stdarg.h>
+#include "stdarg.h"
 #include <bits/wchar.h>
 #include <bits/types/wint_t.h>
 #include <bits/types/mbstate_t.h>
