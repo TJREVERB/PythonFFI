@@ -62,7 +62,7 @@
 
 #include <sys/cdefs.h>
 #include "_null.h"
-#include <sys/_types.h>
+#include "_types.h"
 #include <machine/_limits.h>
 #include <_ctype.h>
 
