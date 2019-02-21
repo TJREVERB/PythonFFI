@@ -94,7 +94,7 @@ extern int __mb_sb_limit;
 #if !defined(_DONT_USE_CTYPE_INLINE_) && \
     (defined(_USE_CTYPE_INLINE_) || defined(__GNUC__) || defined(__cplusplus))
 
-#include <runetype.h>
+#include "runetype.h"
 
 static __inline int
 __maskrune(__ct_rune_t _c, unsigned long _f)
