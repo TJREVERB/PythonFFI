@@ -64,7 +64,7 @@
 #include "_null.h"
 #include "_types.h"
 #include "m_limits.h"
-#include <_ctype.h>
+#include "_ctype.h"
 
 #ifndef _MBSTATE_T_DECLARED
 typedef	__mbstate_t	mbstate_t;
