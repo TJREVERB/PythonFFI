@@ -30,7 +30,7 @@
 # error "libio.h should not be included under _ISOMAC"
 #endif
 
-#include <stdio.h>
+#include "stdio.h"
 
 #if defined _IO_MTSAFE_IO && !defined _IO_lock_t_defined
 # error "Someone forgot to include stdio-lock.h"
