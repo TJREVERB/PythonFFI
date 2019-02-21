@@ -26,6 +26,7 @@
 #if !defined __need_mbstate_t && !defined __need_wint_t
 # define _WCHAR_H 1
 # include <features.h>
+# include "__FILE.h"
 #endif
 
 #ifdef _WCHAR_H
