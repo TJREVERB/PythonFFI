@@ -9,3 +9,6 @@ Then "ar rcs libants.a ants.o"
 Then "cd .."
 Then "python3 setup.py build_ext --inplace"
 This creates 2 files: isisants.c and isisants.cpython-36m-arm-linux-gnueabihf.so
+Example of use in terminal:
+  import isisants
+  isisants.py_k_ants_cancel_deploy()
