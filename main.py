@@ -1,1 +1,1 @@
-python3 print(9)
+python3 print('9')
