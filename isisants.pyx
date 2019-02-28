@@ -18,16 +18,16 @@ cdef extern from "i2c.h":
     KI2CStatus k_i2c_read(int i2c, uint16_t addr, uint8_t *ptr, int len)
 cdef extern from "ants-api.h":
     ctypedef enum KANTSAnt:
-        ANT_1, 
-        ANT_2, 
-        ANT_3, 
-        ANT_4
+        ANT_1 =0, 
+        ANT_2 =1, 
+        ANT_3 =2, 
+        ANT_4 =3
     ctypedef struct ants_telemetry:
         uint16_t raw_temp; 
-        uint16_t deploy_status; 
+        uint16_t deploy_status = SYS_ARMED | ANT_1_ACTIVE | ANT_4_NOT_DEPLOYED; 
         uint32_t uptime
     ctypedef enum KANTSStatus:
-        ANTS_OK, 
+        ANTS_OK =0, 
         ANTS_ERROR, 
         ANTS_ERROR_CONFIG, 
         ANTS_ERROR_NOT_IMPLEMENTED
