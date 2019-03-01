@@ -184,7 +184,7 @@ KANTSStatus k_ants_cancel_deploy(void);
  * @param [out] resp Pointer to storage for data
  * @return KANTSStatus `ANTS_OK` if OK, error otherwise
  */
-KANTSStatus k_ants_get_deploy_status(uint16_t resp);
+KANTSStatus k_ants_get_deploy_status(uint16_t * resp);
 /**
  * Get system uptime
  * @param [out] uptime Pointer to storage for data
