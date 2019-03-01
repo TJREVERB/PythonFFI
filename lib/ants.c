@@ -16,6 +16,7 @@
 
 #include "ants-api.h"
 #include "i2c.h"
+#include "cmocka.h"
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
