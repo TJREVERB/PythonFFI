@@ -16,13 +16,6 @@ cdef extern from "i2c.h":
     void k_i2c_terminate(int * fp)
     KI2CStatus k_i2c_write(int i2c, uint16_t addr, uint8_t *ptr, int len)
     KI2CStatus k_i2c_read(int i2c, uint16_t addr, uint8_t *ptr, int len)
-cdef extern from "deploystatus.h":
-    ctypedef enum KANTSStatus:
-        ANTS_OK =0, 
-        ANTS_ERROR, 
-        ANTS_ERROR_CONFIG, 
-        ANTS_ERROR_NOT_IMPLEMENTED
-    KANTSStatus p_k_ants_get_deploy_status()
 cdef extern from "ants-api.h":
     ctypedef enum KANTSAnt:
         ANT_1 =0, 
@@ -82,7 +75,7 @@ def py_k_ants_auto_deploy(uint8_t timeout):
 def py_k_ants_cancel_deploy():
     return k_ants_cancel_deploy()
 def py_k_ants_get_deploy_status(int resp):
-    return k_ants_get_deploy_status(<uint16 *>resp)
+    return k_ants_get_deploy_status(<uint16_t *>resp)
 def py_k_ants_get_uptime(long long uptime):
     return k_ants_get_uptime(<uint32_t *>uptime)
 def py_k_ants_get_system_telemetry(telem):
