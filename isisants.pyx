@@ -24,7 +24,7 @@ cdef extern from "ants-api.h":
         ANT_4 =3
     ctypedef struct ants_telemetry:
         uint16_t raw_temp; 
-        uint16_t deploy_status = SYS_ARMED | ANT_1_ACTIVE | ANT_4_NOT_DEPLOYED; 
+        uint16_t deploy_status;
         uint32_t uptime
     ctypedef enum KANTSStatus:
         ANTS_OK =0, 
