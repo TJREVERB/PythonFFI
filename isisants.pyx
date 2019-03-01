@@ -81,8 +81,8 @@ def py_k_ants_auto_deploy(uint8_t timeout):
     return k_ants_auto_deploy(timeout)
 def py_k_ants_cancel_deploy():
     return k_ants_cancel_deploy()
-def py_k_ants_get_deploy_status(long long resp):
-    return k_ants_get_deploy_status(<uint16_t *>resp)
+def py_k_ants_get_deploy_status(int resp):
+    return k_ants_get_deploy_status(<uint16 *>resp)
 def py_k_ants_get_uptime(long long uptime):
     return k_ants_get_uptime(<uint32_t *>uptime)
 def py_k_ants_get_system_telemetry(telem):
