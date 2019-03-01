@@ -54,8 +54,6 @@ cdef extern from "ants-api.h":
     KANTSStatus k_ants_passthrough(const uint8_t * tx, int tx_len, uint8_t * rx,int rx_len)
     
     
-def py_k_ants_get_deploy_status():
-    return p_k_ants_get_deploy_status()
 def py_k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_count, uint32_t timeout):
     return k_ants_init(bus,primary,secondary,ant_count,timeout)
 def py_k_ants_terminate():
