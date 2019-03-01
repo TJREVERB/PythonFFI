@@ -1,4 +1,9 @@
 #include "ants.c"
-KANTSStatus py_k_ants_get_deploy_status()
+KANTSStatus k_ants_get_deploy_status()
 {
-  
+    KANTSStatus ret;
+    uint16_t    resp;
+    ret = k_ants_get_deploy_status(&resp);
+    return ret;
+}
+
