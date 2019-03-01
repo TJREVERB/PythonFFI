@@ -270,7 +270,7 @@ KANTSStatus k_ants_cancel_deploy()
     return ANTS_OK;
 }
 
-KANTSStatus k_ants_get_deploy_status(uint16_t resp)
+KANTSStatus k_ants_get_deploy_status(uint16_t * resp)
 {
     if (resp == NULL)
     {
