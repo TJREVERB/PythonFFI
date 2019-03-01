@@ -190,6 +190,7 @@ KANTSStatus k_ants_get_deploy_status(uint16_t * resp);
  * @param [out] uptime Pointer to storage for data
  * @return KANTSStatus `ANTS_OK` if OK, error otherwise
  */
+KANTSStatus p_k_ants_get_deploy_status(void);
 KANTSStatus k_ants_get_uptime(uint32_t * uptime);
 /**
  * Get the current system telemetry
