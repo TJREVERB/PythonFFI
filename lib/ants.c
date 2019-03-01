@@ -270,7 +270,7 @@ KANTSStatus k_ants_cancel_deploy()
     return ANTS_OK;
 }
 
-KANTSStatus k_ants_get_deploy_status(uint16_t * resp)
+KANTSStatus k_ants_get_deploy_status(uint16_t resp)
 {
     if (resp == NULL)
     {
@@ -300,21 +300,6 @@ KANTSStatus k_ants_get_deploy_status(uint16_t * resp)
     return ANTS_OK;
 }
 
-KANTSStatus p_k_ants_get_deploy_status()
-{
-    KANTSStatus ret;
-    uint16_t    resp;
-    
-    expect_value(__wrap_ioctl, addr, ANTS_PRIMARY);
-    expect_value(__wrap_write, cmd, GET_STATUS);
-    expect_value(__wrap_ioctl, addr, ANTS_PRIMARY);
-    will_return(__wrap_read, sizeof(deploy_status));
-    will_return(__wrap_read, &deploy_status);
-    
-    ret = k_ants_get_deploy_status(&resp);
-    
-    assert_int_equal(ret, ANTS_OK);
-}
 KANTSStatus k_ants_get_uptime(uint32_t * uptime)
 {
     if (uptime == NULL)
