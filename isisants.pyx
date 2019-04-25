@@ -58,8 +58,8 @@ def py_k_ants_init(char * bus, uint8_t primary, uint8_t secondary, uint8_t ant_c
     return k_ants_init(bus,primary,secondary,ant_count,timeout)
 def py_k_ants_terminate():
     k_ants_terminate()
-def py_k_ants_configure(config):
-    return k_ants_configure(<KANTSController>config)
+def py_k_ants_configure(KANTSController config):
+    return k_ants_configure(config)
 def py_k_ants_reset():
     return k_ants_reset()
 def py_k_ants_arm():
@@ -72,15 +72,15 @@ def py_k_ants_auto_deploy(timeout):
     return k_ants_auto_deploy(<uint8_t>timeout)
 def py_k_ants_cancel_deploy():
     return k_ants_cancel_deploy()
-def py_k_ants_get_deploy_status(resp):
+def py_k_ants_get_deploy_status(int resp):
     return k_ants_get_deploy_status(<uint16_t *>resp)
-def py_k_ants_get_uptime(uptime):
+def py_k_ants_get_uptime( int uptime):
     return k_ants_get_uptime(<uint32_t *>uptime)
 def py_k_ants_get_system_telemetry(telem):
     return k_ants_get_system_telemetry(<ants_telemetry *>telem)
 def py_k_ants_get_activation_count(antenna, count):
     return k_ants_get_activation_count(<KANTSAnt>antenna,<uint8_t *>count)
-def py_k_ants_get_activation_time(antenna, time):
+def py_k_ants_get_activation_time(antenna, int time):
     return k_ants_get_activation_time(<KANTSAnt>antenna,<uint16_t *>time)
 def py_k_ants_watchdog_kick():
     return k_ants_watchdog_kick()
@@ -90,9 +90,9 @@ def py_k_ants_watchdog_stop():
     return k_ants_watchdog_stop()
 def py_k_ants_passthrough(tx, tx_len,rx,rx_len):
     return k_ants_passthrough(<const uint8_t *>tx,<int>tx_len,<uint8_t *>rx,<int>rx_len)
-def py_k_i2c_init(device, fp):
+def py_k_i2c_init(device, int fp):
     return k_i2c_init(<char *>device, <int *>fp)
-def py_k_i2c_terminate(fp):
+def py_k_i2c_terminate(int fp):
     k_i2c_terminate(<int *>fp)
 def py_k_i2c_write(i2c, addr, ptr, len):
     return k_i2c_write(<int>i2c, <uint16_t>addr, <uint8_t *>ptr, <int>len)
