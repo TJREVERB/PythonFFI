@@ -3,7 +3,7 @@ LIB_DIR = lib
 default: isisants
 
 isisants: setup.py isisants.pyx $(LIB_DIR)/libants.a
-	python3 setup.py build_ext --inplace
+	python3 setup.py build_ext --inplace && rm -f pyexamples.c && rm -Rf build
 
 $(LIB_DIR)/libants.a:
 	make -C $(LIB_DIR) libants.a
