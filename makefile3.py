@@ -1,2 +1,2 @@
 import setup
-python3 setup.py build_ext --inplace
+python3 setup build_ext --inplace
